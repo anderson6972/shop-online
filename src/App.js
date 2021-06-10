@@ -1,4 +1,4 @@
-import './App.css';
+
 import HomePage from './pages/homepages/homePage.component';
 import { Route, Switch, Redirect } from 'react-router-dom';
 import { connect } from 'react-redux';
@@ -9,7 +9,7 @@ import Header from './components/header/header.component';
 import SignInPage from './pages/sign-in/sign-in.component';
 import CheckoutPage from './pages/checkout/checkout.component';
 
-import { auth, createUserProfileDocument } from './firebase/firebase.utils';
+import { auth, createUserProfileDocument} from './firebase/firebase.utils';
 
 import { setCurrentUser } from './redux/user/user.action';
 import { selectCurrentUser } from './redux/user/user.selectors';
@@ -46,7 +46,7 @@ class App extends React.Component {
                 
  
       }else{
-        setCurrentUser(userAuth);
+        setCurrentUser(userAuth);        
       }
 
     })

@@ -12,3 +12,19 @@ const CustomButton = ({children, isGoogleSignIn, inverted, ...otherProps}) => (
 );
 
 export default CustomButton;
+
+/** 
+ * esto es usando css pero no me funciona unos estilos
+ * import React from 'react';
+
+import { CustomButtonContainer } from './custom-buttom.styles';
+
+const CustomButton = ({children, ...props}) => (
+    <CustomButtonContainer {...props}>
+        {children}
+    </CustomButtonContainer>
+);
+
+export default CustomButton;
+ * 
+*/
