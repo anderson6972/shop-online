@@ -1,10 +1,11 @@
 import { createStore, applyMiddleware} from 'redux';
 import { persistStore } from 'redux-persist';//libreria para usar el localstore
 import logger from 'redux-logger';
+import thunk from 'redux-thunk';
 
 import rootReducer from './root-reducer';
 
-const middlewares = [];
+const middlewares = [thunk];
 
 if(process.env.NODE_ENV === 'develoment'){//esto es para evitar logs en produccion solo en pruebas
     middlewares.push(logger);
